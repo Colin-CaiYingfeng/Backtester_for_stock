@@ -132,7 +132,7 @@ class Strategy:
             self.event_sendorder(order)
 
 #%%
-"""Main stategy of trading"""
+"""Main strategy of trading"""
 
 
 
