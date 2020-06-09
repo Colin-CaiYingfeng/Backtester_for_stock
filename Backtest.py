@@ -114,8 +114,8 @@ class Position:
         return self.unrealized_pnl
                 
 #%%
-""" Base strategy engine"""
-class Strategy:
+""" Base event driven engine"""
+class Engine:
     def __init__(self):
         self.event_sendorder = None
         
