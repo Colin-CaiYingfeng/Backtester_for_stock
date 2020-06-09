@@ -58,9 +58,9 @@ A stock backtest frame work.
    ``` python
    backtester = Backtester("code", dt.datetime(yyyy, m, d), dt.datetime(yyyy, m,d))
    backtester.start_backtest()
-   ```
-   
-   已实现的损益和浮动盈亏储存在rpnl和upnl中，两个变量都是dataframe类型。
+   ```  
+     
+   已实现的损益和浮动盈亏储存在rpnl和upnl中，两个变量都是dataframe类型。  
    可以绘制收益率曲线。
    ``` python
    import matplotlib.pyplot as plt
