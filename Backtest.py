@@ -5,6 +5,8 @@ Created on Sun Jun  7 19:55:36 2020
 @author: Colin
 """
 import pandas as pd
+import datetime as dt
+#%%
 from WindPy import w
 w.start()
 w.isconnected()
@@ -134,7 +136,22 @@ class Strategy:
 #%%
 """Main strategy of trading"""
 
-
+#%%
+class Backtester:
+    def __init__(self, symbol, start_date, end_date):
+        self.target_symbol = symbol
+        self.start_dt = start_date
+        self.end_dt = end_date
+        self.strategy = None
+        self.unfilled_orders = []
+        self.position = dict()
+        self.current_prices = None
+        self.rpnl, self.upnl = pd.DataFrame(), pd.DataFrame()
+    
+    def get_timestamp(self):
+        return self.current_prices.get_timestamp(self.target_symbol)
+    
+    
 
 
 
