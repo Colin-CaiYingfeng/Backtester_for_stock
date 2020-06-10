@@ -36,16 +36,6 @@ A stock backtest frame work.
    用于编写自己的交易策略，每当新的tick传入，就作为dataframe的对象储存，event_tick方法随即被重写，执行交易逻辑决定以计算策略参数。  
    使用lookback_intervals储存数据，值表示最多储存前推多少天的数据。  
    定义on_buy_signal和on_sell_signal发出交易信号，变量应包含代码、数量和时间戳。  
-   ``` python
-   def event_position(self, positions)
-       if self.symbol in positions:
-           position = positions[self.symbol]
-           self.is_long = True is position.net > 0 else False
-           self.is_short = True is position.net < 0 else False
-   
-   def on_buy_signal(self, timestamp):
-       if not self.is_long:
-           self.send_market_order(self.symbol, qty, True, timestamp)
   
 8. Backtester类  
    回测实现的事件驱动引擎。  
