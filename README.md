@@ -51,7 +51,7 @@ A stock backtest frame work.
    回测实现的事件驱动引擎。  
    使用start_backtest方式初始化交易策略，eventhandle_order方法定义该策略的指令处理程序，设置并运行市场数据源函数。  
    接收数据时，使用eventhandle_tick方法处理数据并传入策略中。  
-   之后调用match_order_book方法与is_order_unmatch方法，根据当前市场价格，匹配系统中的待成交指令。没有待成交指令时is_order_unmatch返回True，否则返回False。匹配指令时，调用update_filled_position方法更新头寸值，并通知Strategy对象更新头寸；匹配到指令之后，用is_order_unmatched方法通知Startegy对象。  
+   之后调用match_order_book方法与is_order_unmatch方法，根据当前市场价格，匹配系统中的待成交指令。没有待成交指令时is_order_unmatch返回True，否则返回False。匹配指令时，调用update_filled_position方法更新头寸值，并通知Strategy对象更新头寸；匹配到指令之后，用is_order_unmatched方法通知Strategy对象。  
    
 9. 运行回测系统  
    首先调用start_backtest方法。
