@@ -2,8 +2,9 @@
 A stock backtest frame work.  
 用于日频股票策略回测，数据来源Wind。
   
-## <font color=#7FFF00>Features</font>
------------
+## Features
+
+
 使用事件驱动引擎，模拟价格馈送、指令匹配、交易委托账本管理及账户头寸更新，用于防止`look-ahead bias`。  
   
 ### 1. TickData类  
