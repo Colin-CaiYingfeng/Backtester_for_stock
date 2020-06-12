@@ -8,7 +8,7 @@ A stock backtest frame work.
 使用事件驱动引擎，模拟价格馈送、指令匹配、交易委托账本管理及账户头寸更新，用于防止`look-ahead bias`。  
   
 ### 1. TickData类  
-   从市场数据源几首的单个数据单元，包括股票代码`code`，时间戳`timestamp`，开盘价`open_price`， 最终价格`last_price`， 总成交量`total_volume`。 
+   从市场数据源接收的单个数据单元，包括股票代码`code`，时间戳`timestamp`，开盘价`open_price`， 最终价格`last_price`， 总成交量`total_volume`。 
 
 ---   
 ### 2. MarketData类  
@@ -55,17 +55,18 @@ A stock backtest frame work.
 ---
 ### 9. 运行回测系统  
    首先调用`start_backtest`方法。
-   ``` python
+   ```python
    backtester = Backtester("code", dt.datetime(yyyy, m, d), dt.datetime(yyyy, m,d))
    backtester.start_backtest()
    ```  
      
    已实现的损益和浮动盈亏储存在rpnl和upnl中，两个变量都是dataframe类型。  
    可以绘制收益率曲线。
-   ``` python
+   ```python
    import matplotlib.pyplot as plt
    return_rate = backtester.rpl / start_position_value
    return_rate.plot()
    plt.show()
    ```
+   
 ---   
